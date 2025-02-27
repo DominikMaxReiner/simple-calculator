@@ -1,0 +1,80 @@
+<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="400">
+
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+
+        <Style x:Key="DigitStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+            <Setter Property="Background" Value="LightBlue"/>
+        </Style>
+
+        <Style x:Key="OperatorStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+            <Setter Property="Background" Value="Lavender"/>
+        </Style>
+
+        <Style x:Key="SpecialButtonStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+            <Setter Property="Background" Value="LightGreen"/>
+        </Style>
+
+        <Style x:Key="DeletingStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+            <Setter Property="Background" Value="LightPink"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.75*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Textbox for the Calculations -->
+        <TextBox Margin="5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontSize="25" x:Name="CalculationBox"/>
+
+        <!-- Digits -->
+        <Button Content="0" Style="{StaticResource DigitStyle}" Grid.Row="5" Grid.Column="0" x:Name="Button0" Click="Button0_Click"/>
+        <Button Content="1" Style="{StaticResource DigitStyle}" Grid.Row="4" Grid.Column="0" x:Name="Button1" Click="Button1_Click"/>
+        <Button Content="2" Style="{StaticResource DigitStyle}" Grid.Row="4" Grid.Column="1" x:Name="Button2" Click="Button2_Click"/>
+        <Button Content="3" Style="{StaticResource DigitStyle}" Grid.Row="4" Grid.Column="2" x:Name="Button3" Click="Button3_Click"/>
+        <Button Content="4" Style="{StaticResource DigitStyle}" Grid.Row="3" Grid.Column="0" x:Name="Button4" Click="Button4_Click"/>
+        <Button Content="5" Style="{StaticResource DigitStyle}" Grid.Row="3" Grid.Column="1" x:Name="Button5" Click="Button5_Click"/>
+        <Button Content="6" Style="{StaticResource DigitStyle}" Grid.Row="3" Grid.Column="2" x:Name="Button6" Click="Button6_Click"/>
+        <Button Content="7" Style="{StaticResource DigitStyle}" Grid.Row="2" Grid.Column="0" x:Name="Button7" Click="Button7_Click"/>
+        <Button Content="8" Style="{StaticResource DigitStyle}" Grid.Row="2" Grid.Column="1" x:Name="Button8" Click="Button8_Click"/>
+        <Button Content="9" Style="{StaticResource DigitStyle}" Grid.Row="2" Grid.Column="2" x:Name="Button9" Click="Button9_Click"/>
+
+        <!-- Dot and Eaual Sign-->
+        <Button Content="." Style="{StaticResource SpecialButtonStyle}" Grid.Row="5" Grid.Column="1" x:Name="DotButton" Click="DotButton_Click"/>
+        <Button Content="=" Style="{StaticResource SpecialButtonStyle}" Grid.Row="5" Grid.Column="2" x:Name="EqualButton" Click="EqualButton_Click"/>
+
+        <!-- Operators -->
+        <Button Content="+" Style="{StaticResource OperatorStyle}" Grid.Row="2" Grid.Column="3" x:Name="AdditionButton" Click="AdditionButton_Click"/>
+        <Button Content="-" Style="{StaticResource OperatorStyle}" Grid.Row="3" Grid.Column="3" x:Name="SubtractionButton" Click="SubtractionButton_Click"/>
+        <Button Content="*" Style="{StaticResource OperatorStyle}" Grid.Row="4" Grid.Column="3" x:Name="MultiplicationButton" Click="MultiplicationButton_Click"/>
+        <Button Content="/" Style="{StaticResource OperatorStyle}" Grid.Row="5" Grid.Column="3" x:Name="DivisionButton" Click="DivisionButton_Click"/>
+        
+        <!-- Deleting Buttons -->
+        <Button Content="C" Style="{StaticResource DeletingStyle}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="ClearAllButton" Click="ClearAllButton_Click"/>
+        <Button Content="←" Style="{StaticResource DeletingStyle}" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" x:Name="EraseButton" Click="EraseButton_Click"/>
+    </Grid>
+</Window>
