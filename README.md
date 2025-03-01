@@ -9,7 +9,7 @@ This is a simple calculator built with WPF (Windows Presentation Foundation) usi
 ## ⚠️ Known Issues  
 🚧 **Error handling is missing** (invalid inputs can cause crashes)  
 🚧 **Division by zero is not handled yet**  
-🚧 **Negative sign at the beginning is not supported**
+🚧 **The calculator does not support negative signs at the beginning of the entire expression (e.g., '-5 + 3'). However, negative numbers are supported within terms, such as '4 / -7'.**
 
 ## 📸 Screenshot
 ![Calculator Screenshot](https://github.com/user-attachments/assets/7d499405-32c8-4201-8987-8189525d73e6)
