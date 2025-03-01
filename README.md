@@ -1,2 +1,12 @@
 # simple-calculator
 This is a simple calculator built with WPF (Windows Presentation Foundation) using C# and XAML. It supports basic arithmetic operations such as addition, subtraction, multiplication, and division.
+
+## ✅ Features  
+- Basic arithmetic operations: **addition, subtraction, multiplication, division**  
+- Supports **decimal numbers**  
+- User-friendly **WPF interface**  
+
+## ⚠️ Known Issues  
+🚧 **Error handling is missing** (invalid inputs can cause crashes)  
+🚧 **Division by zero is not handled yet**  
+🚧 **Negative sign at the beginning is not supported**
