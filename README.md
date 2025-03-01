@@ -18,3 +18,7 @@ This is a simple calculator built with WPF (Windows Presentation Foundation) usi
 **C#** for the backend-programming
 **XAML** for the User Interface (UI)
 **WPF (Windows Presentation Foundation)** for the UI framework
+
+## Download
+Please download the latest version of the Calculator here: 
+[Download the .exe](https://github.com/DominikMaxReiner/simple-calculator/releases/download/v1.0/Calculator.exe)
