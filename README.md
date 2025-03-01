@@ -19,6 +19,8 @@ This is a simple calculator built with WPF (Windows Presentation Foundation) usi
 **XAML** for the User Interface (UI)
 **WPF (Windows Presentation Foundation)** for the UI framework
 
-## Download
+## Download / Prerequisites
 Please download the latest version of the Calculator here: 
 [Download the .exe](https://github.com/DominikMaxReiner/simple-calculator/releases/download/v1.0/Calculator.exe)
+
+Please ensure that you have **.NET Framework 4.8** (or later) installed on your system for the file to work properly.
