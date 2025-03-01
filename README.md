@@ -10,3 +10,7 @@ This is a simple calculator built with WPF (Windows Presentation Foundation) usi
 🚧 **Error handling is missing** (invalid inputs can cause crashes)  
 🚧 **Division by zero is not handled yet**  
 🚧 **Negative sign at the beginning is not supported**
+
+## 📸 Screenshot
+![Calculator Screenshot](https://github.com/user-attachments/assets/7d499405-32c8-4201-8987-8189525d73e6)
+
